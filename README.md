@@ -1,0 +1,2 @@
+# Bitmap
+create a bitmap
