@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="bitmap"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bitmap">
+				<Option output="/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/bitmap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ragycostadejesus/Downloads/bitmap/."/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 bitmap"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="bitmap/fast">
+				<Option output="/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/bitmap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/ragycostadejesus/Downloads/bitmap/."/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/12.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 bitmap/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/ragycostadejesus/Downloads/bitmap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMCoreHeader.cpp">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMCoreHeader.h">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMFile.cpp">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMFile.h">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMFileHeader.cpp">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMFileHeader.h">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMInfoHeader.cpp">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMInfoHeader.h">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMReader.cpp">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMReader.h">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMWriter.cpp">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMWriter.h">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/Pixel.cpp">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/Pixel.h">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/PixelArray.cpp">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/PixelArray.h">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/bitmap.cpp">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/bitmap_defs.h">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
