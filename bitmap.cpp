@@ -14,7 +14,7 @@ int main() {
 
     std::string inFileName, outFileName;
 
-    std::cout << "\nEnter bitmap file name to read: ";      ///Users/ragycostadejesus/Desktop/COP2
+    std::cout << "\nEnter bitmap file name to read: ";      ///Users/ragycostadejesus/Desktop/COP2/azul_small.bmp
     std::cin >> inFileName;
 
     std::cout << "\nEnter bitmap file name to write: ";
@@ -44,8 +44,16 @@ int main() {
 
 
             EncryptedBMFile *encrypted = reinterpret_cast<EncryptedBMFile *>(&bmFile);
+            EncryptedBMFile *decrypted = reinterpret_cast<EncryptedBMFile *>(&bmFile);
 
             std::string encMsg;
+
+            std::cout << "Loaded Bitmap \"" << inFileName << "\" (" << std::to_string(bytes) << " bytes)\n";
+            std::cout << bmFile.toString();
+
+            bytes = bmFile.store();
+            std::cout << "\n\nStored to Bitmap \"" << outFileName << "\" (" << std::to_string(bytes) << " bytes)\n";
+
 
 
             if(decision == 1) {
@@ -55,24 +63,19 @@ int main() {
                 encrypted->store();
 
             }
-            else {
+            else if(decision == 2){
                 std::cout << "What is the file name you wish to decrypt: ";
                 std::cin >> inFileName;
                 inFile.open(inFileName, std::ios::binary);
 
-                EncryptedBMFile *decrypted = reinterpret_cast<EncryptedBMFile *>(&bmFile);
 
                 bmFile = BMFile(&inFile);
+                bmFile.load();
 
                 encMsg = decrypted->decryptBMFile();
                 std::cout << encMsg;
             }
 
-            std::cout << "Loaded Bitmap \"" << inFileName << "\" (" << std::to_string(bytes) << " bytes)\n";
-            std::cout << bmFile.toString();
-
-            bytes = bmFile.store();
-            std::cout << "\n\nStored to Bitmap \"" << outFileName << "\" (" << std::to_string(bytes) << " bytes)\n";
 
 
         }
