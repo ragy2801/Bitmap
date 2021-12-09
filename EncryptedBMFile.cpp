@@ -1,6 +1,8 @@
-//
-// Created by Ragy Costa de jesus on 12/5/21.
-//
+//    file: EncryptedBMFile.h
+//  Author: COP 3003 Programming II
+// Purpose: class implementation file for a encrypted message
+// --------------------------------------------------------
+
 
 #include "EncryptedBMFile.h"
 
@@ -8,7 +10,7 @@
 
 /* Desc  :   Encrypts the bitmap file
  * Param :   Bitmap File
- */
+ ---------------------------------------------------------*/
 void EncryptedBMFile::encryptBMFile(std::string msg ){
     int bytes;
 
@@ -62,7 +64,7 @@ void EncryptedBMFile::encryptBMFile(std::string msg ){
 
 /* Desc  :   Decrypts the bitmap file
  * Return:   string
- */
+ ---------------------------------------------------------*/
 std::string EncryptedBMFile::decryptBMFile(){
 
     int row = 0, column = 0;

@@ -20,12 +20,6 @@ int main() {
     std::cout << "\nEnter bitmap file name to write: ";
     std::cin >> outFileName;
 
-    int decision;
-    std::cout << "Press 1 to encrypt or 2 to decrypt: ";
-    std::cin>> decision;
-
-
-
 
 
     // make sure the file names were entered
@@ -54,7 +48,9 @@ int main() {
             bytes = bmFile.store();
             std::cout << "\n\nStored to Bitmap \"" << outFileName << "\" (" << std::to_string(bytes) << " bytes)\n";
 
-
+            int decision;
+            std::cout << "Press 1 to encrypt or 2 to decrypt: ";
+            std::cin>> decision;
 
             if(decision == 1) {
                 std::cout << "Write the encrypted message: ";
@@ -63,17 +59,16 @@ int main() {
                 encrypted->store();
 
             }
-            else if(decision == 2){
+            else {
                 std::cout << "What is the file name you wish to decrypt: ";
                 std::cin >> inFileName;
                 inFile.open(inFileName, std::ios::binary);
 
-
-                bmFile = BMFile(&inFile);
+                //bmFile = BMFile(&inFile, &outFile);
                 bmFile.load();
 
                 encMsg = decrypted->decryptBMFile();
-                std::cout << encMsg;
+                std::cout << "Encrypted message is: " << encMsg;
             }
 
 
