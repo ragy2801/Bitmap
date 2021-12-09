@@ -132,8 +132,6 @@ int PixelArray::load(BMReader* reader) {
 
         } // row
 
-        //-----------------------------
-        EncryptedBMFile *encrypted = reinterpret_cast<EncryptedBMFile *>(&pixels);
 
     } // width * height > 0
 

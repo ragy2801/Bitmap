@@ -12,10 +12,6 @@ BMReader.h
 BMWriter.h
 /Users/ragycostadejesus/Downloads/bitmap/BMWriter.h
 
-/Users/ragycostadejesus/Downloads/bitmap/BMFile.cpp
-BMFile.h
-/Users/ragycostadejesus/Downloads/bitmap/BMFile.h
-
 /Users/ragycostadejesus/Downloads/bitmap/BMFile.h
 BMReader.h
 /Users/ragycostadejesus/Downloads/bitmap/BMReader.h
@@ -52,12 +48,6 @@ fstream
 bitmap_defs.h
 /Users/ragycostadejesus/Downloads/bitmap/bitmap_defs.h
 
-/Users/ragycostadejesus/Downloads/bitmap/EncryptedBMFile.cpp
-EncryptedBMFile.h
-/Users/ragycostadejesus/Downloads/bitmap/EncryptedBMFile.h
-PixelArray.h
-/Users/ragycostadejesus/Downloads/bitmap/PixelArray.h
-
 /Users/ragycostadejesus/Downloads/bitmap/EncryptedBMFile.h
 BMFile.h
 /Users/ragycostadejesus/Downloads/bitmap/BMFile.h
@@ -65,12 +55,6 @@ BMFile.h
 /Users/ragycostadejesus/Downloads/bitmap/Pixel.h
 bitmap_defs.h
 /Users/ragycostadejesus/Downloads/bitmap/bitmap_defs.h
-
-/Users/ragycostadejesus/Downloads/bitmap/PixelArray.cpp
-cmath
--
-PixelArray.h
-/Users/ragycostadejesus/Downloads/bitmap/PixelArray.h
 
 /Users/ragycostadejesus/Downloads/bitmap/PixelArray.h
 string

@@ -25,9 +25,7 @@ int main() {
     std::cin>> decision;
 
 
-    std::string encMsg;
-    std::cout << "Write the encrypted message: ";
-    std::cin >> encMsg;
+
 
 
     // make sure the file names were entered
@@ -49,6 +47,7 @@ int main() {
 
             std::string encMsg;
 
+
             if(decision == 1) {
                 std::cout << "Write the encrypted message: ";
                 std::cin >> encMsg;
@@ -57,7 +56,15 @@ int main() {
 
             }
             else {
-                encMsg = encrypted->decryptBMFile();
+                std::cout << "What is the file name you wish to decrypt: ";
+                std::cin >> inFileName;
+                inFile.open(inFileName, std::ios::binary);
+
+                EncryptedBMFile *decrypted = reinterpret_cast<EncryptedBMFile *>(&bmFile);
+
+                bmFile = BMFile(&inFile);
+
+                encMsg = decrypted->decryptBMFile();
                 std::cout << encMsg;
             }
 
