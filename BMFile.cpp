@@ -103,6 +103,9 @@ int BMFile::store() {
     bytes += infoHeader.store(&writer);
     bytes += pixels.store(&writer);
     writer.save();
+
+
+
     return bytes;
 }
 

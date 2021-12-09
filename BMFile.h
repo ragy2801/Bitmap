@@ -37,7 +37,7 @@ public:
 
     std::string toString();
 
-private:
+protected:
     BMReader reader;
     BMWriter writer;
 

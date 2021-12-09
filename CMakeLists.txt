@@ -23,4 +23,4 @@ add_executable(bitmap
         Pixel.cpp
         Pixel.h
         PixelArray.cpp
-        PixelArray.h)
+        PixelArray.h EncryptedBMFile.cpp EncryptedBMFile.h)

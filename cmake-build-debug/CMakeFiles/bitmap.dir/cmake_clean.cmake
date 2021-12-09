@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/bitmap.dir/BMInfoHeader.cpp.o"
   "CMakeFiles/bitmap.dir/BMReader.cpp.o"
   "CMakeFiles/bitmap.dir/BMWriter.cpp.o"
+  "CMakeFiles/bitmap.dir/EncryptedBMFile.cpp.o"
   "CMakeFiles/bitmap.dir/Pixel.cpp.o"
   "CMakeFiles/bitmap.dir/PixelArray.cpp.o"
   "CMakeFiles/bitmap.dir/bitmap.cpp.o"

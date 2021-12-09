@@ -7,12 +7,14 @@
 #ifndef PIXELARRAY_H
 #define PIXELARRAY_H
 
+
+
 #include <string>       // for file type property
 #include "BMReader.h"   // bitmap file reader
 #include "BMWriter.h"   // bitmap file writer
 #include "Pixel.h"      // Pixel class
 
-class PixelArray {
+class PixelArray : public Pixel {
 public:
     // constructors
     // ----------------------------------------------------

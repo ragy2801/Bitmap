@@ -273,6 +273,30 @@ BMWriter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bitmap.dir/build.make CMakeFiles/bitmap.dir/BMWriter.cpp.s
 .PHONY : BMWriter.cpp.s
 
+EncryptedBMFile.o: EncryptedBMFile.cpp.o
+.PHONY : EncryptedBMFile.o
+
+# target to build an object file
+EncryptedBMFile.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bitmap.dir/build.make CMakeFiles/bitmap.dir/EncryptedBMFile.cpp.o
+.PHONY : EncryptedBMFile.cpp.o
+
+EncryptedBMFile.i: EncryptedBMFile.cpp.i
+.PHONY : EncryptedBMFile.i
+
+# target to preprocess a source file
+EncryptedBMFile.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bitmap.dir/build.make CMakeFiles/bitmap.dir/EncryptedBMFile.cpp.i
+.PHONY : EncryptedBMFile.cpp.i
+
+EncryptedBMFile.s: EncryptedBMFile.cpp.s
+.PHONY : EncryptedBMFile.s
+
+# target to generate assembly for a file
+EncryptedBMFile.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bitmap.dir/build.make CMakeFiles/bitmap.dir/EncryptedBMFile.cpp.s
+.PHONY : EncryptedBMFile.cpp.s
+
 Pixel.o: Pixel.cpp.o
 .PHONY : Pixel.o
 
@@ -372,6 +396,9 @@ help:
 	@echo "... BMWriter.o"
 	@echo "... BMWriter.i"
 	@echo "... BMWriter.s"
+	@echo "... EncryptedBMFile.o"
+	@echo "... EncryptedBMFile.i"
+	@echo "... EncryptedBMFile.s"
 	@echo "... Pixel.o"
 	@echo "... Pixel.i"
 	@echo "... Pixel.s"

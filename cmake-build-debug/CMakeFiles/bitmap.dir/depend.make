@@ -39,6 +39,18 @@ CMakeFiles/bitmap.dir/BMWriter.cpp.o: \
  ../BMWriter.cpp \
  ../BMWriter.h \
  ../bitmap_defs.h
+CMakeFiles/bitmap.dir/EncryptedBMFile.cpp.o: \
+ ../BMCoreHeader.h \
+ ../BMFile.h \
+ ../BMFileHeader.h \
+ ../BMInfoHeader.h \
+ ../BMReader.h \
+ ../BMWriter.h \
+ ../EncryptedBMFile.cpp \
+ ../EncryptedBMFile.h \
+ ../Pixel.h \
+ ../PixelArray.h \
+ ../bitmap_defs.h
 CMakeFiles/bitmap.dir/Pixel.cpp.o: \
  ../Pixel.cpp \
  ../Pixel.h \
@@ -57,6 +69,7 @@ CMakeFiles/bitmap.dir/bitmap.cpp.o: \
  ../BMInfoHeader.h \
  ../BMReader.h \
  ../BMWriter.h \
+ ../EncryptedBMFile.h \
  ../Pixel.h \
  ../PixelArray.h \
  ../bitmap.cpp \

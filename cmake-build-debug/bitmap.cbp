@@ -118,6 +118,12 @@
 		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/BMWriter.h">
 			<Option target="bitmap"/>
 		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/EncryptedBMFile.cpp">
+			<Option target="bitmap"/>
+		</Unit>
+		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/EncryptedBMFile.h">
+			<Option target="bitmap"/>
+		</Unit>
 		<Unit filename="/Users/ragycostadejesus/Downloads/bitmap/Pixel.cpp">
 			<Option target="bitmap"/>
 		</Unit>
