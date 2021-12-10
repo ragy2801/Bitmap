@@ -48,6 +48,10 @@ fstream
 bitmap_defs.h
 /Users/ragycostadejesus/Downloads/bitmap/bitmap_defs.h
 
+/Users/ragycostadejesus/Downloads/bitmap/EncryptedBMFile.cpp
+EncryptedBMFile.h
+/Users/ragycostadejesus/Downloads/bitmap/EncryptedBMFile.h
+
 /Users/ragycostadejesus/Downloads/bitmap/EncryptedBMFile.h
 BMFile.h
 /Users/ragycostadejesus/Downloads/bitmap/BMFile.h
@@ -65,16 +69,6 @@ BMWriter.h
 /Users/ragycostadejesus/Downloads/bitmap/BMWriter.h
 Pixel.h
 /Users/ragycostadejesus/Downloads/bitmap/Pixel.h
-
-/Users/ragycostadejesus/Downloads/bitmap/bitmap.cpp
-iostream
--
-fstream
--
-BMFile.h
-/Users/ragycostadejesus/Downloads/bitmap/BMFile.h
-EncryptedBMFile.h
-/Users/ragycostadejesus/Downloads/bitmap/EncryptedBMFile.h
 
 /Users/ragycostadejesus/Downloads/bitmap/bitmap_defs.h
 stdint.h

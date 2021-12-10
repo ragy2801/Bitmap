@@ -14,77 +14,65 @@ int main() {
 
     std::string inFileName, outFileName;
 
-    std::cout << "\nEnter bitmap file name to read: ";      ///Users/ragycostadejesus/Desktop/COP2/azul_small.bmp
-    std::cin >> inFileName;
+    std::string encMsg;
 
-    std::cout << "\nEnter bitmap file name to write: ";
-    std::cin >> outFileName;
+    std::ifstream inFile;
+    inFile.open(inFileName, std::ios::binary);
+
+    std::ofstream outFile;
+    outFile.open(outFileName, std::ios::out | std::ios::trunc | std::ios::binary);
+
+    BMFile bmFile = BMFile(&inFile, &outFile);
+
+    int decision;
 
 
 
-    // make sure the file names were entered
-    if (inFileName.length() && outFileName.length()) {
+    //while loop for user interaction
+    do {
 
-        std::ifstream inFile;
-        inFile.open(inFileName, std::ios::binary);
+        std::cout << "\nType 1 to encrypt or 2 to decrypt or 3 to exit: ";
+        std::cin>> decision;
 
-        std::ofstream outFile;
-        outFile.open(outFileName, std::ios::out|std::ios::trunc|std::ios::binary);
+        //encrypt the file if decision is 1
+        if (decision == 1) {
 
-        if (inFile.is_open() && outFile.is_open()) {
+            std::cout
+                    << "\nEnter bitmap file name to read: ";      ///Users/ragycostadejesus/Desktop/COP2/azul_small.bmp
+            std::cin >> inFileName;
 
-            BMFile bmFile = BMFile(&inFile, &outFile);
+            std::cout << "\nEnter bitmap file name to write: ";
+            std::cin >> outFileName;
+
+            inFile.open(inFileName, std::ios::binary);
+            outFile.open(outFileName, std::ios::out | std::ios::trunc | std::ios::binary);
+
+            std::cout << "Write the encrypted message: ";
+            std::cin >> encMsg;
+
             int bytes = bmFile.load();
-
-
-            EncryptedBMFile *encrypted = reinterpret_cast<EncryptedBMFile *>(&bmFile);
-            EncryptedBMFile *decrypted = reinterpret_cast<EncryptedBMFile *>(&bmFile);
-
-            std::string encMsg;
-
             std::cout << "Loaded Bitmap \"" << inFileName << "\" (" << std::to_string(bytes) << " bytes)\n";
             std::cout << bmFile.toString();
 
-            bytes = bmFile.store();
+            EncryptedBMFile *encrypted = reinterpret_cast<EncryptedBMFile *>(&bmFile);
+            encrypted->encryptBMFile(encMsg);
+
+            encrypted->store();
             std::cout << "\n\nStored to Bitmap \"" << outFileName << "\" (" << std::to_string(bytes) << " bytes)\n";
 
-            int decision;
-            std::cout << "Press 1 to encrypt or 2 to decrypt: ";
-            std::cin>> decision;
+        //decrypting the input file
+        } else if(decision == 2) {
+            std::cout << "What is the file name you wish to decrypt: ";
+            std::cin >> inFileName;
+            inFile.open(inFileName, std::ios::binary);
 
-            if(decision == 1) {
-                std::cout << "Write the encrypted message: ";
-                std::cin >> encMsg;
-                encrypted->encryptBMFile(encMsg);
-                encrypted->store();
-
-            }
-            else {
-                std::cout << "What is the file name you wish to decrypt: ";
-                std::cin >> inFileName;
-                inFile.open(inFileName, std::ios::binary);
-
-                //bmFile = BMFile(&inFile, &outFile);
-                bmFile.load();
-
-                encMsg = decrypted->decryptBMFile();
-                std::cout << "Encrypted message is: " << encMsg;
-            }
-
-
-
-        }
-        else {
-            std::cout << "Could not open input file: " << inFileName << std::endl;
+            bmFile.load();
+            EncryptedBMFile *decrypted = reinterpret_cast<EncryptedBMFile *>(&bmFile);
+            encMsg = decrypted->decryptBMFile();
+            std::cout << "Encrypted message is: " << encMsg;
         }
 
-
-    } // filename lengths > 0
-    else {
-        std::cout << "File names must be > 0 length!\n";
-    }
-
-
+    }while(decision != 3);
 
 
 

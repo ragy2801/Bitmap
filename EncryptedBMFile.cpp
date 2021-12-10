@@ -11,7 +11,7 @@
 /* Desc  :   Encrypts the bitmap file
  * Param :   Bitmap File
  ---------------------------------------------------------*/
-void EncryptedBMFile::encryptBMFile(std::string msg ){
+void EncryptedBMFile::encryptBMFile(std::string msg ) {
     int bytes;
 
     int row = 0, column = 0;
@@ -20,20 +20,17 @@ void EncryptedBMFile::encryptBMFile(std::string msg ){
 
         for (int bit = 0; bit < 8; bit++) {
 
-            Pixel *pixel = &pixels.getPixels()[row][column];
+            Pixel *nextPixel = &pixels.getPixels()[row][column];
 
+            uint8_t blue = nextPixel->getBlue();
 
-            uint8_t blue = pixel->getBlue();
-
-            //encryption
             if (nextChar & 1) {
                 blue |= 1;
-            }
-            else {
+            } else {
                 blue &= 0xFE;
             }
 
-            pixel->setBlue(blue);
+            nextPixel->setBlue(blue);
 
             nextChar >>= 1;
         }
@@ -43,11 +40,11 @@ void EncryptedBMFile::encryptBMFile(std::string msg ){
             row++;
             column = 0;
         }
-
         bytes++;
     }
 
-    for (int term = 0; term < 8; term++ ) {
+
+    for (int term = 0; term < 8; term++) {
         Pixel *nextPixel = &pixels.getPixels()[row][column];
         uint8_t blue = nextPixel->getBlue();
         blue &= 0xFE;
@@ -59,6 +56,7 @@ void EncryptedBMFile::encryptBMFile(std::string msg ){
         }
         bytes++;
     }
+
 }
 
 
@@ -74,10 +72,9 @@ std::string EncryptedBMFile::decryptBMFile(){
 // until we hit the null terminator
     do {
 
-        for (int i = 0; i < 8; i++) {
+        for (int i = 0; i < pixels.getWidth() ; i++) {
 
             Pixel *pixel = &pixels.getPixels()[row][column];
-
 
             nextChar |= (pixel->getBlue() & 1) << i;
 
