@@ -12,8 +12,9 @@
 
 class EncryptedBMFile: public BMFile{
 public:
+    EncryptedBMFile(std::ifstream* reader = nullptr, std::ofstream* writer = nullptr);
 
-    void encryptBMFile(std::string bmFile );
+    void encryptBMFile(std::string & msg );
 
     std::string decryptBMFile();
 

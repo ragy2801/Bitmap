@@ -1,17 +1,18 @@
 //    file: EncryptedBMFile.h
 //  Author: COP 3003 Programming II
-// Purpose: class implementation file for a encrypted message
+// Purpose: class implementation file for an encrypted message
 // --------------------------------------------------------
 
 
 #include "EncryptedBMFile.h"
 
-
+EncryptedBMFile::EncryptedBMFile(std::ifstream* reader, std::ofstream* writer) : BMFile(reader, writer) {
+}
 
 /* Desc  :   Encrypts the bitmap file
  * Param :   Bitmap File
  ---------------------------------------------------------*/
-void EncryptedBMFile::encryptBMFile(std::string msg ) {
+void EncryptedBMFile::encryptBMFile(std::string & msg ) {
     int bytes;
 
     int row = 0, column = 0;
@@ -33,13 +34,15 @@ void EncryptedBMFile::encryptBMFile(std::string msg ) {
             nextPixel->setBlue(blue);
 
             nextChar >>= 1;
+
+            column++;
+            if (column == pixels.getWidth()) {
+                row++;
+                column = 0;
+            }
         }
 
-        column++;
-        if (column == pixels.getWidth()) {
-            row++;
-            column = 0;
-        }
+
         bytes++;
     }
 
@@ -65,14 +68,18 @@ void EncryptedBMFile::encryptBMFile(std::string msg ) {
  ---------------------------------------------------------*/
 std::string EncryptedBMFile::decryptBMFile(){
 
+
     int row = 0, column = 0;
     char nextChar;
     std::string decryptMSg = "";
+    int position = 0;
 
 // until we hit the null terminator
     do {
-
-        for (int i = 0; i < pixels.getWidth() ; i++) {
+        nextChar = 0;
+        for (int i = 0; i < 8 ; i++) {
+            int row = position / pixels.getWidth();
+            int column = position % pixels.getWidth();
 
             Pixel *pixel = &pixels.getPixels()[row][column];
 
@@ -84,11 +91,11 @@ std::string EncryptedBMFile::decryptBMFile(){
                 column = 0;
                 row++;
             }
-
+            position++;
         }
 
         decryptMSg += nextChar;
-    } while (nextChar);
+    } while (nextChar != '\0');
 
     return decryptMSg;
 }
